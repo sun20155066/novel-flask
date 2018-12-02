@@ -1,0 +1,11 @@
+1、Install Flask
+   打开cmd 输入pip install Flask
+
+
+2、打开cmd  切换到novel文件夹下，执行以下命令
+    set flask_app=flaskr
+    set flask_env=development
+    flask init-db
+    flask run
+
+3、完成

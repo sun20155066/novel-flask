@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Search{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="title">Title（你要搜索的小说标题，支持模糊查询）</label>
+    <input name="title" id="title" required>
+    <input type="submit" value="Search">
+  </form>
+{% endblock %}

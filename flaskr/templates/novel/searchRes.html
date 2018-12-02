@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %} 搜索到的小说列表{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for note in notes %}
+    <article class="note">
+      <header>
+        <div id="not">
+          <h1><a href="{{ url_for('novel.detail',NoteId=note['id']) }}"> {{ note['title'] }}</a></h1>
+          <div class="about">by {{ note['username'] }} on {{ note['created'].strftime('%Y-%m-%d  %H:%M:%S') }}</div>
+        </div>
+      </header>
+    </article>
+  {% endfor %}
+{% endblock %}
+
